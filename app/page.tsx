@@ -278,7 +278,7 @@ export default function TerraAnniversary() {
               description={t.instruments.modis.description}
               keyData={t.instruments.modis.keyData}
               capabilities={t.instruments.modis.capabilities}
-              image="satellite instrument modis earth observation camera blue technology"
+              image="/modis.gif"
             />
 
             {/* ASTER */}
@@ -290,7 +290,7 @@ export default function TerraAnniversary() {
               description={t.instruments.aster.description}
               keyData={t.instruments.aster.keyData}
               capabilities={t.instruments.aster.capabilities}
-              image="mountain terrain elevation map topography green satellite view"
+              image="/aster.gif"
               reverse
             />
 
@@ -303,7 +303,7 @@ export default function TerraAnniversary() {
               description={t.instruments.ceres.description}
               keyData={t.instruments.ceres.keyData}
               capabilities={t.instruments.ceres.capabilities}
-              image="earth radiation energy clouds atmosphere yellow orange glow"
+              image="/ceres.gif"
             />
 
             {/* MISR */}
@@ -629,7 +629,7 @@ function InstrumentCard({
         {/* Image */}
         <div className="relative rounded-2xl overflow-hidden">
           <img
-            src={`/.jpg?height=600&width=800&query=${image}`}
+            src={image.startsWith('/') ? image : `/.jpg?height=600&width=800&query=${image}`}
             alt={name}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
